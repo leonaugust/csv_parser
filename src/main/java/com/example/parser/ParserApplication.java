@@ -13,6 +13,7 @@ import java.io.FileWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.UUID;
 
 import static com.example.parser.config.ParserConfig.PROJECT_FOLDER;
@@ -58,6 +59,7 @@ public class ParserApplication {
                                 : "Not_Found";
                         lineInArray[1] = found;
                         writer.writeNext(lineInArray);
+                        log.info(Arrays.toString(lineInArray));
                     }
                 }
                 log.info("Успех. Обработка csv была успешна, вы можете остановить процесс.");
